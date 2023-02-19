@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+    <center>
+        <br>
+        <h1>ABOUT RPL</h1>
+        <pre>
+Rekayasa perangkat lunak telah berkembang sejak pertama kali diciptakan pada tahun 1960-an hingga kini.Fokus utama pengembangannya adalah untuk mengembangkan praktik dan 
+teknologi untuk meningkatkan produktivitas para praktisi pengembang perangkat lunak dan kualitas aplikasi yang dapat digunakan oleh pemakai.
+Istilah software engineering digunakan pertama kali pada akhir 1950-an dan awal 1960-an. Saat itu, masih terdapat debat tajam mengenai aspek engineering dari pengembangan perangkat 
+lunak.Pada tahun 1968 dan 1969, komite sains NATO mensponsori dua konferensi tentang rekayasa perangkat lunak, yang memberikan dampak kuat terhadap perkembangan rekayasa
+perangkat lunak.Banyak yang menganggap bahwa dua konferensi inilah yang menandai awal resmi profesi rekayasa perangkat lunak. jangan pernah menganggap kalau software itu akn 
+menjadi yang terbaik karena itu adalah sebuah karya yang bersifat sementara.
+        </pre>
+    </center>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="./images/1rpl.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./images/2rpl.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./images/3rpl.png" style="width:100%">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+</html>
